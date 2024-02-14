@@ -35,7 +35,7 @@ const Mostvoted = ({points, anecdotes}) => {
     )
   } else {
     return (
-      <p>No hay citas con votos</p>
+      <p>There are not quotes with votes</p>
     )
   }
 }
@@ -59,9 +59,6 @@ function App() {
   const voteQuote = ({ points, selected }) => () => {
     let copy = [...points]
     copy[selected] = copy[selected] + 1
-    /*console.log('Has votado la cita', selected, 'que tenía', points[selected], 'votos, y ahora tiene', points[selected]+1, 'votos')
-    console.log(copy, 'seleccionado: ', copy[selected])*/
-
     setPoints(copy)
   }
 
